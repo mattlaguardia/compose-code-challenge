@@ -1,4 +1,4 @@
-for i in {1..1000}; do
+for i in {1..10000000}; do
   curl 'https://admirable-stardust-dd80db.netlify.app/api/count' \
     -X 'POST' \
     -H 'accept: */*' \
