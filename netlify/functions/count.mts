@@ -16,7 +16,7 @@ export default async (req: Request, context: Context) => {
     return new Response(count.toString());
   } else if (method === 'POST') {
     count = count + 1;
-    await store.set('count', count + Number.MAX_SAFE_INTEGER + '');
+    await store.set('count', count * count + '');
     return new Response(count.toString());
   }
 };
