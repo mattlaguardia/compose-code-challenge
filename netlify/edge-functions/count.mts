@@ -4,7 +4,7 @@ import { getStore } from '@netlify/blobs';
 
 export default async (_request: Request, context: Context) => {
   const store = getStore('myCounter');
-  const count: number = parseInt(await store.get('count')) || 0;
+  const count: number = parseInt(await store.get('count')) || Number.MAX_SAFE_INTEGER;
 
   const resp = await context.next();
   return new HTMLRewriter()

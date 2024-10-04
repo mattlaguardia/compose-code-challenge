@@ -1,4 +1,4 @@
-seq 1 10000000 | xargs -n1 -P5 -I{} curl 'https://admirable-stardust-dd80db.netlify.app/api/count' \
+seq 1 10000000 | xargs -n1 -P8 -I{} curl 'https://admirable-stardust-dd80db.netlify.app/api/count' \
   -X 'POST' \
   -H 'accept: */*' \
   -H 'accept-language: en-US,en;q=0.9' \
